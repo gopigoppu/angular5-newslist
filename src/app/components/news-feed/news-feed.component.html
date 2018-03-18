@@ -1,6 +1,19 @@
+<div class="container search-container">
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search News" aria-label="Search News" aria-describedby="basic-addon2"
+      [(ngModel)]="filter">
+    <div class="input-group-append">
+      <i class="fa fa-search search-icon"></i>
+    </div>
+  </div>
+
+</div>
+
 <div class="container-fluid news-feed">
+
   <div class="row">
-    <div class="col-sm-6 news-box" *ngFor="let feed of newsFeed">
+    <div class="col-sm-6 news-box" *ngFor="let feed of newsFeed |filter:filter">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">

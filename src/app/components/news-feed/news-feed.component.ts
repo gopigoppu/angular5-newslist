@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../../shared/api.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { ApiService } from '../../shared/api.service';
   styleUrls: ['./news-feed.component.scss']
 })
 export class NewsFeedComponent implements OnInit {
+
   newsFeed: any;
 
   constructor(private apiService: ApiService) { }

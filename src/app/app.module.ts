@@ -7,9 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SearchComponent } from './components/search/search.component';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 import { ApiService } from './shared/api.service';
 
@@ -19,14 +19,14 @@ import { ApiService } from './shared/api.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent,
     NewsFeedComponent,
-    PaginationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [
     ApiService
