@@ -1,4 +1,8 @@
-# Xoriant
+# Angular5 - NewsList
+
+It's a small application, which lists number of news with search and pagination enabled using Angular 5 framework.
+
+This project uses "[ng2-search-filter](https://github.com/solodynamo/ng2-search-filter)" for search news in the list and "[ngx-pagination](https://github.com/michaelbromley/ngx-pagination)" for pagination purpose.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
