@@ -6,10 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { ApiService } from './shared/api.service';
 
@@ -18,7 +18,6 @@ import { ApiService } from './shared/api.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     NewsFeedComponent,
   ],
   imports: [
@@ -26,7 +25,8 @@ import { ApiService } from './shared/api.service';
     HttpClientModule,
     AppRoutingModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [
     ApiService
