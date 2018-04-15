@@ -9,6 +9,7 @@ import { ApiService } from '../../shared/api.service';
 export class NewsFeedComponent implements OnInit {
 
   newsFeed: any;
+  term: any;
   p = 1;
 
   constructor(private apiService: ApiService) { }

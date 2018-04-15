@@ -22,10 +22,12 @@ import { ApiService } from './shared/api.service';
   ],
   imports: [
     BrowserModule,
+    Ng2SearchPipeModule,
     HttpClientModule,
     AppRoutingModule,
-    Ng2SearchPipeModule,
+
     FormsModule,
+
     NgxPaginationModule
   ],
   providers: [
