@@ -2,37 +2,44 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NewsFeedComponent } from './components/news-feed/news-feed.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
-import { NgxPaginationModule } from 'ngx-pagination';
+import { GamesListComponent } from './components/games-list/games-list.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { ApiService } from './shared/api.service';
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { OrderModule } from 'ngx-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { GamesListSearchComponent } from './components/games-list-search/games-list-search.component';
+import { GamesListPaginationComponent } from './components/games-list-pagination/games-list-pagination.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NewsFeedComponent,
+    GamesListComponent,
+    PageNotFoundComponent,
+    GamesListSearchComponent,
+    GamesListPaginationComponent
   ],
   imports: [
     BrowserModule,
-    Ng2SearchPipeModule,
-    HttpClientModule,
     AppRoutingModule,
-
+    HttpClientModule,
+    NgHttpLoaderModule,
     FormsModule,
-
+    Ng2SearchPipeModule,
+    OrderModule,
     NgxPaginationModule
   ],
-  providers: [
-    ApiService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
